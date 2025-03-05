@@ -1,1 +1,55 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "tailwindcss";
+
+.swiper-pagination-bullet {
+  border-radius: 100%;
+  background-color: #20b486;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  border-radius: 50px;
+  background-color: #20b486;
+  opacity: 1;
+  transform: scale(1);
+  width: 30px;
+  height: 9px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 30px;
+  height: 30px;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 20px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+:root {
+  --color-primary: #20b486;
+  --color-secondary: #185cdb;
+  --color-btnprimary: #20b486;
+  --color-lightPrimary: #f2fffb;
+  --color-researchbg: #eef4ff;
+  --color-researchtext: #3538cd;
+  --color-programmingbg: #fff9f3;
+  --color-programmingtext: #ff9b26;
+  --color-developmentbg: #f0f9ff;
+  --color-developmenttext: #c11574;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter", serif;
+}
