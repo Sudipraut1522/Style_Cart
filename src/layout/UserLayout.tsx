@@ -6,7 +6,9 @@ const UserLayout: React.FC = () => {
   return (
     <div>
       <Navbar />
-      <Outlet />
+      <div className="px-4 lg:px-[10%]">
+        <Outlet />
+      </div>
     </div>
   );
 };

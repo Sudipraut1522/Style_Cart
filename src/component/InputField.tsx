@@ -13,9 +13,11 @@ type InputFieldProps = {
   errorClassName?: string;
   requires?: boolean;
   labelClassName?: string;
+  icon?: React.ReactNode;
 };
 
 const InputField: React.FC<InputFieldProps> = ({
+  icon,
   type = "text",
   labelName,
   error,
