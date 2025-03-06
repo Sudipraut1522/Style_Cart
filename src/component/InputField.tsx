@@ -5,7 +5,7 @@ import { HiEye, HiEyeOff } from "react-icons/hi";
 type InputFieldProps = {
   error?: string | null;
   type?: string;
-  labelName: string;
+  labelName?  : string;
   inputClassName?: string;
   name?: string;
   placeholder?: string;
