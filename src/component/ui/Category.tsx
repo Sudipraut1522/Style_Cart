@@ -10,6 +10,7 @@ import {
   Watch,
 } from "lucide-react";
 import Button from "../Button";
+import { useNavigate } from "react-router-dom";
 
 export const categoryList = [
   {
@@ -45,10 +46,13 @@ export const categoryList = [
 ];
 
 const Category: React.FC = () => {
+  const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<number | null>(null);
 
-  const handleCategory = (index: number) => {
-    setSelectedCategory((prev) => (prev === index ? null : index));
+  const handleCategory = (data: any) => {
+    const newCategory = selectedCategory === data?.id ? null : data?.id;
+    setSelectedCategory(newCategory);
+    navigate(`?category=${data?.name}`);
   };
 
   return (
@@ -83,9 +87,9 @@ const Category: React.FC = () => {
             {categoryList.map((list, index) => (
               <div
                 key={index}
-                onClick={() => handleCategory(index)}
+                onClick={() => handleCategory(list)}
                 className={`border flex flex-col items-center justify-center rounded-md p-6 cursor-pointer transition-all duration-300 ${
-                  selectedCategory === index
+                  selectedCategory === list?.id
                     ? "bg-red-600 text-white border-red-600"
                     : "border-gray-400 hover:bg-gray-200"
                 }`}
@@ -93,7 +97,7 @@ const Category: React.FC = () => {
                 {/* Icon */}
                 <div>
                   {React.cloneElement(list.icon, {
-                    color: selectedCategory === index ? "white" : "gray",
+                    color: selectedCategory === list?.id ? "white" : "gray",
                   })}
                 </div>
 
