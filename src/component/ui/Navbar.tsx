@@ -16,13 +16,13 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <div className="">
+      <div className="sticky top-0 z-50 ">
         <h2 className="flex items-center text-center justify-center h-[48px] bg-black text-white">
           Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!
           Shop Now in English
         </h2>
 
-        <nav className=" px-2 lg:px-[10%]">
+        <nav className=" px-2 lg:px-[10%] bg-white">
           <div className="flex pt-8 pb-2 items-center   justify-between ">
             <div>
               <h1 className="text-3xl font-bold">Exclusive</h1>
