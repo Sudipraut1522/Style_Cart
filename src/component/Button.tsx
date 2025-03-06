@@ -21,7 +21,7 @@ const Button: React.FC<buttonProps> = ({
   ...props
 }) => {
   return (
-    <div className="flex w-full">
+    <div className=" ">
       <button
         className={`cursor-pointer text-sm  border-none ${className}`}
         onClick={onClick}
