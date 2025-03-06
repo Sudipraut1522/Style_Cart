@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { UseFormRegister } from "react-hook-form";
+import { FieldError, UseFormRegister } from "react-hook-form";
 import { HiEye, HiEyeOff } from "react-icons/hi";
 
 type InputFieldProps = {
-  error?: string | null;
+  error?: FieldError | null;
   type?: string;
-  labelName?  : string;
+  labelName?: string;
   inputClassName?: string;
   name?: string;
   placeholder?: string;
@@ -67,7 +67,9 @@ const InputField: React.FC<InputFieldProps> = ({
         )}
       </div>
 
-      {error && <p className={errorClassName}>*{error}</p>}
+      {error && (
+        <p className={` text-red-600 ${errorClassName}`}>*{error.message}</p>
+      )}
     </div>
   );
 };
