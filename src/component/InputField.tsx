@@ -44,13 +44,13 @@ const InputField: React.FC<InputFieldProps> = ({
 
       <div className="relative">
         <input
+          {...props}
           id={name}
           type={isPasswordVisible && type === "password" ? "text" : type}
           required={requires}
-          className={`flex h-10 w-full border-1 border-gray-300 outline-none px-3 py-4 text-sm focus:ring-[1px] placeholder:text-gray-500 rounded-md ${inputClassName}`}
+          className={`flex h-10 w-full border-white border-b-1 border-gray-400  outline-none  px-3 py-4 text-sm  placeholder:text-gray-500 rounded-md    ${inputClassName}`}
           placeholder={placeholder}
           {...(register ? register(name) : {})}
-          {...props}
         />
 
         {type === "password" && (

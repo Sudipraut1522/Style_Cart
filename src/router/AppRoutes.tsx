@@ -5,6 +5,7 @@ import About from "../page/About";
 import UserLayout from "../layout/UserLayout";
 import Contact from "../page/Contact";
 import SignUp from "../page/SignUp";
+import Login from "../page/Login";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -12,10 +13,11 @@ const AppRoutes: React.FC = () => {
       <Routes>
         <Route element={<UserLayout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" index element={<About />} />
-          <Route path="/contact" index element={<Contact />} />
-          <Route path="/about" index element={<About />} />
-          <Route path="/signup" index element={<SignUp />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact"  element={<Contact />} />
+          <Route path="/about"  element={<About />} />
+          <Route path="/signup"  element={<SignUp />} />
+          <Route path="/login"  element={<Login/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
