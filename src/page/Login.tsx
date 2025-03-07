@@ -43,7 +43,6 @@ const Login = () => {
             Enter your details Below
           </p>
           <form className="space-y-4" onSubmit={handleSubmit(onSubmit)}>
-            {/* yo hera ani arko aafai gara  css ma nai garxu ni twa logaraok oktokmokeokookgic  */}
             <InputField
               inputClassName="border-b-1 border-gray-600 "
               error={errors?.email}

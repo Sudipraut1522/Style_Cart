@@ -9,7 +9,8 @@ type buttonProps = {
   icones?: React.ReactNode;
   disabled?: boolean;
 };
-
+// yo chai props ho optional rw required xa temli k k chyenxa tehi garne ho kina darako code dekherw
+// aaba hera button ma hami lai k k chinxa vana tw??  aba ytha raixa tehi pass gara props jashari lo gara
 const Button: React.FC<buttonProps> = ({
   type = "submit",
   labelClassName,
