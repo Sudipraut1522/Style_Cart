@@ -33,3 +33,17 @@ export const registerSchema = z
     path: ["cpassword"],
   });
 export type RegisterFormData = z.infer<typeof registerSchema>;
+
+export const loginSchema = z.object({
+  email: z
+    .string()
+    .email({ message: "Please enter a valid email address" })
+    .min(1, { message: "Email is required" }),
+  password: z
+    .string()
+    .min(8, { message: "Password must be at least 8 characters" })
+    .regex(/[a-zA-Z]/, { message: "Password must contain letters" })
+    .regex(/[0-9]/, { message: "Password must contain numbers" }),
+});
+
+export type LoginType = z.infer<typeof loginSchema>;

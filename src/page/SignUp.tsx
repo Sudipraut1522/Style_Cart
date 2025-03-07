@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterFormData, registerSchema } from "../schema/RegisterSchema";
 import { CgPassword } from "react-icons/cg";
+import { NavLink } from "react-router-dom";
 
 const SignUp: React.FC = () => {
   const {
@@ -88,7 +89,7 @@ const SignUp: React.FC = () => {
               />
             </div>
             <div className="flex justify-center">
-              <p>Already have an Account? Login</p>
+              <p>Already have an Account? <NavLink to={"/login"} className="text-blue-600">Login</NavLink></p>
             </div>
           </div>
         </form>
